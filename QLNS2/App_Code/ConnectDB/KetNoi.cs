@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace QLNS2
 {
@@ -29,6 +27,7 @@ namespace QLNS2
 
                 return connection;
             }
+
             // Hàm đóng kết nối
             public void CloseConnection(SqlConnection connection)
             {
@@ -42,6 +41,32 @@ namespace QLNS2
                 {
                     Console.WriteLine("Lỗi khi đóng kết nối: " + ex.Message);
                 }
+            }
+
+            public DataTable ExecuteQuery(string query)
+            {
+                DataTable dt = new DataTable();
+
+                try
+                {
+                    using (SqlConnection con = OpenConnection())
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, con))
+                        {
+                            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                            {
+                                da.Fill(dt);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception (e.g., log it)
+                    Console.WriteLine("Error executing query: " + ex.Message);
+                }
+
+                return dt;
             }
         }
     }

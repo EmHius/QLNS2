@@ -1,0 +1,9 @@
+﻿body {
+}
+/* Add this CSS to your site's main stylesheet or a dedicated stylesheet */
+
+/* Ensure GridView is scrollable */
+.gridview {
+    max-height: 400px; /* Adjust as necessary */
+    overflow-y: auto;
+}

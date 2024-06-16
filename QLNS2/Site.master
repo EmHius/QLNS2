@@ -19,6 +19,7 @@
 
   <!-- Icons. Uncomment required icon fonts -->
   <link href="fonts/assets/vendor/fonts/boxicons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
 
   <!-- Core CSS -->
   <link href="fonts/assets/vendor/css/core.css" rel="stylesheet" class="template-customizer-core-css" />
@@ -33,7 +34,11 @@
 
   <!-- Helpers -->
   <script src="fonts/assets/vendor/js/helpers.js"></script>
-
+     <!-- CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Template customizer & Theme config files -->
   <script src="fonts/assets/js/config.js"></script>
 </head>
